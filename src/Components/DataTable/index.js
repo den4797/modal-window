@@ -71,7 +71,7 @@ class DataTable extends Component {
     return data.map(row => (
       <tr className="data-table__row">
         {columns.map(col => (
-          <td className="data-table__item">{row[col.dataField]}</td>
+          <td className="data-table__item" key={'row-${index}'}>{row[col.dataField]}</td>
         ))}
       </tr>
     ));
@@ -83,7 +83,7 @@ class DataTable extends Component {
     return (
       <table className="data-table">
         <thead className="data-table__head">
-          <tr>
+          <tr key={'row-${index}'}>
             {columns.map(col => (
               <th>
                 <p onClick={col.sort && this.toggleSort(col.dataField)}>
