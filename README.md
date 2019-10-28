@@ -1,5 +1,8 @@
 # modal-window
 
-###In consol e:
-npm install
+In console:
+
 npm start
+
+
+localhost:3000
